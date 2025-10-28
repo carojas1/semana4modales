@@ -1,0 +1,50 @@
+<ion-content class="ion-padding editar-modal">
+
+  <div class="modal-content">
+    <div class="header">
+      <ion-icon name="create-outline" class="icon"></ion-icon>
+      <h2>Editar Perfil</h2>
+      <p>Actualiza tus datos personales y mantén tu perfil al día.</p>
+    </div>
+
+    <ion-list>
+      <ion-item>
+        <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+        <ion-label position="floating">Nombre completo</ion-label>
+        <ion-input [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon slot="start" name="call-outline"></ion-icon>
+        <ion-label position="floating">Teléfono</ion-label>
+        <ion-input type="tel" [(ngModel)]="telefono"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon slot="start" name="mail-outline"></ion-icon>
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="correo"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-card class="tip">
+      <ion-card-content>
+        <ion-icon name="bulb-outline"></ion-icon>
+        <span>Recuerda usar un correo válido para recibir notificaciones.</span>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="botones">
+      <ion-button expand="block" color="success" (click)="guardar()">
+        <ion-icon slot="start" name="save-outline"></ion-icon>
+        Guardar cambios
+      </ion-button>
+
+      <ion-button expand="block" fill="outline" color="medium" (click)="cerrar()">
+        <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+        Regresar
+      </ion-button>
+    </div>
+  </div>
+
+</ion-content>
